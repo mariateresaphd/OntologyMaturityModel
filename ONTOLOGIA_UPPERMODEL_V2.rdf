@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/utente/ontologies/2024/7/untitled-ontology-134/"
+     xml:base="http://www.semanticweb.org/utente/ontologies/2024/7/untitled-ontology-134/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/utente/ontologies/2024/7/untitled-ontology-134">
+        <owl:imports rdf:resource="http://jerico.casaccia.enea.it/cn-hpc/TERMINUS_upper_ontology_v1.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#affects -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#affects"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#composes -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#composes"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#generates -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#generates"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#has"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#instantiates -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#instantiates"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isEvaluatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isEvaluatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#refersTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#measures -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#measures"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#optimizes -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#optimizes"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#refersTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#refersTo"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#relates -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#relates"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://jerico.casaccia.enea.it/cn-hpc/TERMINUS_upper_ontology_v1.0#System -->
+
+    <rdf:Description rdf:about="http://jerico.casaccia.enea.it/cn-hpc/TERMINUS_upper_ontology_v1.0#System">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#isEvaluatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#assessment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#refersTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#bestPractice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#assessment -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#assessment">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#assessmentAim"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#assessmentAim -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#assessmentAim">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#instantiates"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#dimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#bestPractice -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#bestPractice">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#generates"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#improvement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#dimension -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#dimension">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#dimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#improvement -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#improvement">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#optimizes"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#indicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#improvementAim -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#improvementAim">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#bestPractice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#indicator -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#indicator">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#composes"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#dimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#measures"/>
+                <owl:someValuesFrom rdf:resource="http://jerico.casaccia.enea.it/cn-hpc/TERMINUS_upper_ontology_v1.0#Ility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#policy -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#policy">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#affects"/>
+                <owl:someValuesFrom rdf:resource="http://jerico.casaccia.enea.it/cn-hpc/TERMINUS_upper_ontology_v1.0#Ility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#refersTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#dimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#problem -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#problem">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#bestPractice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
